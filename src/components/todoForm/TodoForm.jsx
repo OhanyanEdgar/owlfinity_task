@@ -1,26 +1,24 @@
 
-import "./todoForm.css"
 
+import { useState, useContext, memo } from "react";
+import {Context} from "../../context"
+
+// CSS
+import "./todoForm.css"
 import { FcAddRow } from 'react-icons/fc';
 
-import { useState, useContext } from "react";
 
-import {Context} from "../../context"
 
 
 const TodoForm = () => {
 
     const {handleTodoAdd} = useContext(Context)
-
-
     const [todoData, setTodoData] = useState(
         {
             title: "",
             description: "",
         }
     )
-    
-
 
     return (
         <div className="todoForm">
@@ -31,13 +29,13 @@ const TodoForm = () => {
                 setTodoData({title: "", description: ""})
             }}>
 
-                <input className="todoForm_form_title" type="text" name="title" placeholder="Title" value={todoData.title} 
+                <input className="todoForm_form_title" type="text" name="title" placeholder="Title" value={todoData.title}
                     onChange={e => setTodoData(prevData => ({
                         ...prevData,
                         title: e.target.value
                     }))} />
 
-                <textarea rows="9" cols="" className="todoForm_form_description" type="text" name="description" placeholder="Description (optional)" value={todoData.description} 
+                <textarea rows="9" cols="" className="todoForm_form_description" type="text" name="description" placeholder="Description (optional)" value={todoData.description}
                     onChange={e => setTodoData(prevData => ({
                         ...prevData,
                         description: e.target.value
@@ -52,4 +50,4 @@ const TodoForm = () => {
     )
 }
 
-export default TodoForm;
+export default memo(TodoForm);

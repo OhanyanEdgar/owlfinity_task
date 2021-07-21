@@ -1,13 +1,16 @@
+import { useEffect, useState, useContext } from 'react';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
+// css
 import "./todoList.css"
 
-import { useEffect, useState, useContext } from 'react';
+// context
 import { Context } from "../../context";
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
+// components
 import TodoItem from "../todoItem/TodoItem.jsx";
 
 const TodoList = () => {
-
     const {todosToShow} = useContext(Context)
     const [localTodos, setLocalTodos] = useState(todosToShow);
 
@@ -20,7 +23,6 @@ const TodoList = () => {
         const items = Array.from(localTodos);
         const [reorderedItem] = items.splice(result.source.index, 1);
         items.splice(result.destination.index, 0, reorderedItem);
-
         setLocalTodos(items);
     }
 

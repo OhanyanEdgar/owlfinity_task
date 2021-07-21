@@ -1,10 +1,12 @@
+import React, { useState, useEffect, useCallback } from "react"
+
+// css
 import './App.css';
 
+// context
 import { Context } from "./context"
 
-
-import React, { useState, useEffect } from "react"
-
+// components
 import Header from "./components/header/Header.jsx";
 import TodoController from "./components/todoController/TodoController.jsx"
 import TodoList from "./components/todoList/TodoList.jsx"
@@ -12,10 +14,7 @@ import TodoForm from "./components/todoForm/TodoForm.jsx"
 
 
 function App() {
-
   const [sortedNewerAtFirst, setSortedNewerAtFirst] = useState(true);
-
-
   const [todos, setTodos] = useState([
     {
       title: "Wake up",
@@ -43,8 +42,7 @@ function App() {
     setTodosToShow(todos)
   }, [todos])
 
-
-  const handleTodoAdd = todoData => {
+  const handleTodoAdd = useCallback((todoData) => {
     if (todoData.title && todoData.title.length > 2) {
       setTodos(prevTodos => [
         ...prevTodos,
@@ -56,62 +54,51 @@ function App() {
         },
       ])
     }
-    
-  }
-// TodoList Functionality
+  }, [])
 
-  const handleOnChackedTodo = newTodo => {
-    setTodos(todos.map(todo => {
+  const handleOnChackedTodo =  useCallback((newTodo) => {
+    setTodos(prevState => prevState.map(todo => {
       if (newTodo.id === todo.id){
         return newTodo
       }
       return todo
     }));
-  }
+  }, [])
 
-  // const handleOnChackedTodo = newTodo => {
-  //   const delNewTodoTwin = todos.filter(t => t.id !== newTodo.id)
-  //   setTodos([
-  //     ...delNewTodoTwin,
-  //     newTodo,
-  //   ])
-  // }
+  const handleOnDelTodo = useCallback((todo) => {
+    setTodos(prevState => prevState.filter(t => t.id !== todo.id))
+  }, []);
 
-  const handleOnDelTodo = todo => setTodos(todos.filter(t => t.id !== todo.id));
-
-// TodoController Functionality
-
-  const handleOnClearCompleted = () => setTodos(todos.filter(todo => !todo.isCompleted));
+  const handleOnClearCompleted = useCallback(() => {
+    setTodos(prevState => prevState.filter(todo => !todo.isCompleted))
+  }, []);
 
   const handleOnFilterByDate = () => {
-
     const filterTodos = [...todosToShow];
-    sortedNewerAtFirst ? 
+    sortedNewerAtFirst ?
       filterTodos.sort((a, b) => (a.id < b.id) ? 1 : -1):
       filterTodos.sort((a, b) => (a.id > b.id) ? 1 : -1);
     setTodosToShow(filterTodos);
     setSortedNewerAtFirst(!sortedNewerAtFirst);
   }
 
-  const handleOnShowUndone = () => {
+  const handleOnShowUndone = useCallback(() => {
     const showTodos = todos.filter(todo => !todo.isCompleted)
     setTodosToShow(showTodos)
-  }
+  }, [todos])
 
-  const handleShowDone = () => {
+  const handleShowDone = useCallback(() => {
     const showTodos = todos.filter(todo => todo.isCompleted)
     setTodosToShow(showTodos)
-  }
+  }, [todos])
 
-  const handleOnShowAll = () => {
+  const handleOnShowAll = useCallback(() => {
     setTodosToShow(todos)
-  }
-  
+  }, [todos])
 
   return (
     <Context.Provider value={{
       handleTodoAdd,
-      // TodoController
       todosToShow,
       handleOnClearCompleted,
       handleOnFilterByDate,
@@ -119,8 +106,6 @@ function App() {
       handleOnShowUndone,
       handleShowDone,
       handleOnShowAll,
-      // TodoList
-      // TodoItem
       handleOnChackedTodo,
       handleOnDelTodo,
 

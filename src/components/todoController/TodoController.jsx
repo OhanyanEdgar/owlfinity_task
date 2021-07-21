@@ -1,9 +1,11 @@
 
-import "./todoController.css"
 
 import { useContext } from "react";
-
 import {Context} from "../../context"
+
+// CSS
+import "./todoController.css"
+
 
 
 
@@ -29,7 +31,6 @@ const TodoController = () => {
                         <button onClick={handleOnFilterByDate}>By Date ({sortedNewerAtFirst? "newer": "older"})</button>
                         <button onClick={handleOnShowUndone} >Show Undone</button>
                     </div>
-                    
                     <button onClick={handleShowDone} >Show Done</button>
                     <button onClick={handleOnShowAll} >Show All</button>
 

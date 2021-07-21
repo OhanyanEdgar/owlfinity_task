@@ -1,4 +1,3 @@
-
 import "./header.css";
 
 import owlLogo from "../../assets/img/logo-owlfinity.svg"
@@ -12,6 +11,5 @@ const Header = () => {
         </div>
     )
 }
-
 
 export default Header
