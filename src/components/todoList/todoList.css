@@ -1,0 +1,10 @@
+.todoList {
+  margin: 10px;
+}
+
+.todoList_dropable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=todoList.css.map */

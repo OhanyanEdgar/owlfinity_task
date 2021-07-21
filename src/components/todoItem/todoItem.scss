@@ -1,0 +1,149 @@
+
+
+
+.todoItem{
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 3px solid #90caf9;
+    border-radius: 3px;
+    width: 400px;
+
+    &_status{
+        font-size: 30px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        &_checkbox{
+            transform: scale(1.5);
+            margin-right: 5px;
+        }
+
+        &_active{
+            margin: 0 auto;
+            color: blue;
+        }
+        &_completed{
+            margin: 0 auto;
+
+            color: green;
+        }
+    }
+
+    &_content{
+        margin-bottom: 10px;
+
+        &_title{
+            color: white;
+
+            &_static{
+                color: #90caf9;
+                font-size: 18px;
+            }
+
+            &_dinamic{
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+
+        &_description{
+            max-height: 96px;
+            max-width: 90%;
+            color: white;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &_static{
+                color: #90caf9;
+                font-size: 18px;
+            }
+
+            &_dinamic{
+                font-weight: 600;
+                font-size: 20px;
+            }
+        }
+    }
+
+    &_buttons{
+
+        & button{
+            width: 100px;
+            height: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        &_del{
+            background-color: red;
+        }
+
+        &_edit{
+            background-color: blue;
+
+        }
+    }
+
+    &_edit{
+        
+        &_form{
+            display: flex;
+            flex-direction: column;
+
+            &_title{
+                width: 40%;
+                margin-top: 10px;
+                border: 3px solid #90caf9;
+                border-radius: 3px;
+                background-color:transparent;
+                color: white;
+                font-weight: 700;
+    
+                &::placeholder{
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+
+            &_description{
+                width: 70%;
+                height: 50px;
+                margin-top: 10px;
+                border: 3px solid #90caf9;
+                border-radius: 3px;
+                background-color:transparent;
+                color: white;
+                font-weight: 700;
+                overflow: auto;
+                outline: none;
+                resize: none;
+    
+                &::placeholder{
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+
+            &_button{
+                margin-top: 10px;
+                width: 100px;
+                height: 25px;
+                font-size: 16px;
+                font-weight: 600;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                margin-right: 10px;
+                cursor: pointer;
+                background-color: yellowgreen;
+            }
+        }
+    }
+}

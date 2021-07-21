@@ -1,0 +1,182 @@
+.todoItem {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  width: 400px;
+}
+
+.todoItem_status {
+  font-size: 30px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todoItem_status_checkbox {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-right: 5px;
+}
+
+.todoItem_status_active {
+  margin: 0 auto;
+  color: blue;
+}
+
+.todoItem_status_completed {
+  margin: 0 auto;
+  color: green;
+}
+
+.todoItem_content {
+  margin-bottom: 10px;
+}
+
+.todoItem_content_title {
+  color: white;
+}
+
+.todoItem_content_title_static {
+  color: #90caf9;
+  font-size: 18px;
+}
+
+.todoItem_content_title_dinamic {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.todoItem_content_description {
+  max-height: 96px;
+  max-width: 90%;
+  color: white;
+  overflow: scroll;
+}
+
+.todoItem_content_description::-webkit-scrollbar {
+  display: none;
+}
+
+.todoItem_content_description_static {
+  color: #90caf9;
+  font-size: 18px;
+}
+
+.todoItem_content_description_dinamic {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.todoItem_buttons button {
+  width: 100px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.todoItem_buttons_del {
+  background-color: red;
+}
+
+.todoItem_buttons_edit {
+  background-color: blue;
+}
+
+.todoItem_edit_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todoItem_edit_form_title {
+  width: 40%;
+  margin-top: 10px;
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_title::-webkit-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_title:-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_title::-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_title::placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_description {
+  width: 70%;
+  height: 50px;
+  margin-top: 10px;
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+
+.todoItem_edit_form_description::-webkit-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_description:-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_description::-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_description::placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoItem_edit_form_button {
+  margin-top: 10px;
+  width: 100px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: yellowgreen;
+}
+/*# sourceMappingURL=todoItem.css.map */

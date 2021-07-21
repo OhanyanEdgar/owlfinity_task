@@ -1,0 +1,99 @@
+.todoForm_form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todoForm_form_title {
+  width: 40%;
+  margin: 10px;
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_title::-webkit-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_title:-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_title::-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_title::placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_description {
+  width: 70%;
+  height: 50px;
+  margin: 10px;
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  overflow: auto;
+  outline: none;
+  resize: none;
+}
+
+.todoForm_form_description::-webkit-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_description:-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_description::-ms-input-placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_description::placeholder {
+  color: white;
+  font-weight: 700;
+}
+
+.todoForm_form_button {
+  position: absolute;
+  left: 209px;
+  top: -3.1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todoForm_form_button_text {
+  color: white;
+  font-weight: 600;
+}
+
+.todoForm_form_button button {
+  margin-left: 5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+/*# sourceMappingURL=todoForm.css.map */

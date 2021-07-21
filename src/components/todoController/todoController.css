@@ -1,0 +1,37 @@
+.todoController {
+  border: 3px solid #90caf9;
+  border-radius: 3px;
+  margin: 0 10px;
+  width: 410px;
+}
+
+.todoController button {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: blue;
+}
+
+.todoController_completed {
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.todoController_filters_text {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=todoController.css.map */

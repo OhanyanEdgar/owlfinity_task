@@ -1,0 +1,67 @@
+
+
+.todoForm{
+    // border: 1px white solid;
+
+    &_form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        &_title{
+            width: 40%;
+            margin: 10px;
+            border: 3px solid #90caf9;
+            border-radius: 3px;
+            background-color:transparent;
+            color: white;
+            font-weight: 700;
+
+            &::placeholder{
+                color: white;
+                font-weight: 700;
+            }
+        }
+
+        &_description{
+            width: 70%;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #90caf9;
+            border-radius: 3px;
+             
+            background-color:transparent;
+            color: white;
+            font-weight: 700;
+            overflow: auto;
+            outline: none;
+            resize: none;
+
+            &::placeholder{
+                color: white;
+                font-weight: 700;
+            }
+        }
+
+        &_button{
+            position: absolute;
+            left: 209px;
+            top: -3.1px;
+            display: flex;
+            align-items: center;
+
+            &_text{
+                color: white;
+                font-weight: 600;
+            }
+
+            & button{
+                margin-left: 5px;
+
+                padding: 0;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+}

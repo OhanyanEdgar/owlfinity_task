@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,IAAI;CAOf;;AALI,AAAD,kBAAU,CAAA;EACN,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "todoList.scss"
+    ],
+    "names": [],
+    "file": "todoList.css"
+}
